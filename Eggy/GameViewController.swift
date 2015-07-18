@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
         
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 5)
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 4)
         
         // retrieve the egg node
         top = scene.rootNode.childNodeWithName("Top", recursively: true)!
@@ -113,14 +113,6 @@ class GameViewController: UIViewController {
             newAngle = (Float(-_seconds)*(Float)(M_PI)*2)/3600
             
             top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
-            
-//            let velocity = sender.velocityInView(sender.view!)
-            
-            
-//            if(newAngle > 0){
-//                newAngle = 0
-//               top.runAction(SCNAction.rotateToX(0, y: 0, z: 0, duration: 0.3))
-//            }
             
             currentAngle = newAngle
         }
