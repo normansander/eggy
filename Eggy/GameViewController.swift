@@ -14,36 +14,30 @@ class GameViewController: UIViewController {
 
     var currentAngle: Float = 0.0
     var top: SCNNode = SCNNode()
-    var _seconds: Int = 0
-    var label: UILabel = UILabel(frame: CGRectMake(0, 0, 200, 21));
+    var seconds: Double = 0
+    var label: UILabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
+    var endDate: NSDate?
+    var timer: NSTimer?
+    var finished: Bool = true
+    var button: UIButton = UIButton(frame: CGRectMake(0, 0, 200, 40))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // create a new scene
         let scene = SCNScene(named: "art.scnassets/egg")!
-        
-        // create and add a camera to the scene
         let cameraNode = SCNNode()
+        
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
-        
-        // place the camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 4)
-        
-        // retrieve the egg node
-        top = scene.rootNode.childNodeWithName("Top", recursively: true)!
+        self.top = scene.rootNode.childNodeWithName("Top", recursively: true)!
         let bottom = scene.rootNode.childNodeWithName("Bottom", recursively: true)!
         
-        // retrieve the SCNView
         let scnView = self.view as! SCNView
-        
-        // set the scene to the view
         scnView.scene = scene
         
-        // scnView.showsStatistics = true
-        
-        // configure the view
+#if DEBUG
+        scnView.showsStatistics = true
+#endif
         scnView.backgroundColor = UIColor.whiteColor()
         
         // add gesture recognizer
@@ -57,17 +51,37 @@ class GameViewController: UIViewController {
         self.view.addSubview(label)
         
         // add button
-        let button: UIButton = UIButton(frame: CGRectMake(0, 0, 200, 40))
-        button.center = CGPointMake(self.view.frame.width/2, self.view.frame.height-60)
-        button.setTitle("Start", forState: UIControlState.Normal)
-        button.layer.backgroundColor = UIColor.greenColor().CGColor
-        button.addTarget(self, action: "startPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.button.center = CGPointMake(self.view.frame.width/2, self.view.frame.height-60)
+        self.button.setTitle("Start", forState: UIControlState.Normal)
+        self.button.setTitle("Stop", forState: UIControlState.Selected)
+        self.button.layer.backgroundColor = UIColor.greenColor().CGColor
+        self.button.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
-        
     }
     
-    func startPressed(sender: UIButton!) {
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+    func startTimer() {
+        if self.seconds == 0 {
+            return
+        }
+        self.finished = false
+        self.endDate = NSDate().dateByAddingTimeInterval(self.seconds)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        self.finished = true
+        self.timer?.invalidate()
+    }
+    
+    func buttonPressed(sender: UIButton!) {
+        self.timer?.invalidate()
+        if self.finished {
+            self.startTimer()
+        }
+        else {
+            self.stopTimer()
+        }
+        sender.selected = !self.finished
     }
     
     override func shouldAutorotate() -> Bool {
@@ -92,42 +106,50 @@ class GameViewController: UIViewController {
     }
     
     func panGesture(sender: UIPanGestureRecognizer) {
+        self.timer?.invalidate()
         let translation = sender.translationInView(sender.view!)
-        var newAngle: Float
+        var angle: Float
         
-        if(sender.state == UIGestureRecognizerState.Changed) {
-            newAngle = (Float)(translation.x)*(Float)(M_PI)/180.0
-            newAngle += currentAngle
+        if sender.state == UIGestureRecognizerState.Changed {
+            angle = (Float)(translation.x)*(Float)(M_PI)/180.0
+            angle += self.currentAngle
             
-            if (newAngle > 0) {
-                newAngle = 0
+            if angle > 0 {
+                angle = 0
             }
-            
-            _seconds = 60 * Int(round((-newAngle * 3600)/((Float)(M_PI)*2) / 60))
-            
+            self.seconds = 60 * Double(round((-angle * 3600)/((Float)(M_PI)*2) / 60))
             self.updateLabel()
-            
-            top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
-        } else if(sender.state == UIGestureRecognizerState.Ended) {
-
-            newAngle = (Float(-_seconds)*(Float)(M_PI)*2)/3600
-            
-            top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
-            
-            currentAngle = newAngle
+            self.top.rotation =  SCNVector4Make(0, 1, 0, angle)
+        }
+        else if sender.state == UIGestureRecognizerState.Ended {
+            if !self.finished && self.seconds > 0 {
+                self.startTimer()
+            }
+            self.setRotation(self.seconds)
         }
     }
     
     func update() {
-        _seconds--
+        self.seconds = self.endDate!.timeIntervalSinceNow
+        self.setRotation(self.seconds)
+        self.updateLabel()
         
+        if self.seconds == 0 {
+            self.timer?.invalidate()
+            self.finished = true
+        }
+    }
+    
+    func setRotation(seconds: Double) {
+        let newAngle = (Float(-self.seconds)*(Float)(M_PI)*2)/3600
+        self.top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
+        self.currentAngle = newAngle
     }
     
     func updateLabel() {
-        
-        let seconds: Int = _seconds % 60;
-        let minutes: Int = (_seconds / 60) % 60;
-        let hours: Int = _seconds / 3600;
+        let seconds: Int = Int(self.seconds % 60)
+        let minutes: Int = Int((self.seconds / 60) % 60)
+        let hours: Int = Int(self.seconds / 3600)
         
         if(hours > 0){
             label.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
