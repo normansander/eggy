@@ -14,6 +14,10 @@
 		94047E761B077A4000BCFB43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94047E751B077A4000BCFB43 /* Images.xcassets */; };
 		94047E791B077A4000BCFB43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94047E771B077A4000BCFB43 /* LaunchScreen.xib */; };
 		94047E851B077A4000BCFB43 /* EggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94047E841B077A4000BCFB43 /* EggyTests.swift */; };
+		94BC359E1B5EFF810036A768 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94BC359D1B5EFF810036A768 /* tick.mp3 */; };
+		94BC35A01B5F0AFC0036A768 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC359F1B5F0AFC0036A768 /* SoundManager.swift */; };
+		94BC35A31B5F19050036A768 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94BC35A11B5F19050036A768 /* alarm.mp3 */; };
+		94BC35A41B5F19050036A768 /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94BC35A21B5F19050036A768 /* tick2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		94047E7E1B077A4000BCFB43 /* EggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94047E831B077A4000BCFB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94047E841B077A4000BCFB43 /* EggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggyTests.swift; sourceTree = "<group>"; };
+		94BC359D1B5EFF810036A768 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
+		94BC359F1B5F0AFC0036A768 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		94BC35A11B5F19050036A768 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		94BC35A21B5F19050036A768 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,11 @@
 		94047E691B077A4000BCFB43 /* Eggy */ = {
 			isa = PBXGroup;
 			children = (
+				94A1C91E1B5D4E20005167F3 /* Sounds */,
 				94047E6C1B077A4000BCFB43 /* AppDelegate.swift */,
 				94047E6E1B077A4000BCFB43 /* art.scnassets */,
 				94047E701B077A4000BCFB43 /* GameViewController.swift */,
+				94BC359F1B5F0AFC0036A768 /* SoundManager.swift */,
 				94047E721B077A4000BCFB43 /* Main.storyboard */,
 				94047E751B077A4000BCFB43 /* Images.xcassets */,
 				94047E771B077A4000BCFB43 /* LaunchScreen.xib */,
@@ -113,6 +123,16 @@
 				94047E831B077A4000BCFB43 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94A1C91E1B5D4E20005167F3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				94BC359D1B5EFF810036A768 /* tick.mp3 */,
+				94BC35A21B5F19050036A768 /* tick2.mp3 */,
+				94BC35A11B5F19050036A768 /* alarm.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +217,11 @@
 			files = (
 				94047E791B077A4000BCFB43 /* LaunchScreen.xib in Resources */,
 				94047E761B077A4000BCFB43 /* Images.xcassets in Resources */,
+				94BC35A31B5F19050036A768 /* alarm.mp3 in Resources */,
+				94BC35A41B5F19050036A768 /* tick2.mp3 in Resources */,
 				94047E6F1B077A4000BCFB43 /* art.scnassets in Resources */,
 				94047E741B077A4000BCFB43 /* Main.storyboard in Resources */,
+				94BC359E1B5EFF810036A768 /* tick.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +241,7 @@
 			files = (
 				94047E711B077A4000BCFB43 /* GameViewController.swift in Sources */,
 				94047E6D1B077A4000BCFB43 /* AppDelegate.swift in Sources */,
+				94BC35A01B5F0AFC0036A768 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
