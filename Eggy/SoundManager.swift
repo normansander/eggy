@@ -30,10 +30,12 @@ class SoundManager {
         let sound = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
         sound!.numberOfLoops = loops
         sound!.prepareToPlay()
-        self.sounds = [name: sound]
+        self.sounds[name] = sound
     }
     
     func play(name: String!) {
+        self.sounds[name]?.stop()
+        self.sounds[name]?.currentTime = 0
         self.sounds[name]?.play()
     }
     

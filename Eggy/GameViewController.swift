@@ -10,7 +10,6 @@ import UIKit
 import QuartzCore
 import SceneKit
 
-
 class GameViewController: UIViewController {
 
     @IBOutlet weak var skView: SCNView!
@@ -28,19 +27,33 @@ class GameViewController: UIViewController {
     var soundManager: SoundManager?
     
     override func viewDidLoad() {
+        self.label.font = UIFont(name: "Futura-CondensedMedium", size:25)
+        
         // Register sounds
         self.soundManager = SoundManager.sharedInstance
         self.soundManager?.register("tick", loops: -1)
-//        self.soundManager?.register("tick2")
-//        self.soundManager?.register("alarm")
+        self.soundManager?.register("tick2")
+        self.soundManager?.register("alarm")
         
         super.viewDidLoad()
+        
+        // 3D setup
         let scene = SCNScene(named: "art.scnassets/egg")!
         let cameraNode = SCNNode()
+        let lightNode = SCNNode()
         
+        // Cam
         cameraNode.camera = SCNCamera()
-        scene.rootNode.addChildNode(cameraNode)
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 4)
+        scene.rootNode.addChildNode(cameraNode)
+        
+        // Light
+//        TODO
+//        lightNode.light = SCNLight()
+//        lightNode.position = SCNVector3(x: 0, y: 0, z: 4)
+//        scene.rootNode.addChildNode(lightNode)
+        
+        // Define parts of object
         self.top = scene.rootNode.childNodeWithName("Top", recursively: true)!
         let bottom = scene.rootNode.childNodeWithName("Bottom", recursively: true)!
         
@@ -49,6 +62,7 @@ class GameViewController: UIViewController {
         
 #if DEBUG
         scnView.showsStatistics = true
+        Helper.printFonts()
 #endif
         scnView.backgroundColor = UIColor.whiteColor()
         
@@ -57,6 +71,8 @@ class GameViewController: UIViewController {
         scnView.addGestureRecognizer(panRecognizer)
         
         self.updateLabel()
+        
+        self.button.titleLabel?.font = UIFont(name: "Futura-CondensedMedium", size:25)
         self.button.setTitle("Start", forState: UIControlState.Normal)
         self.button.setTitle("Stop", forState: UIControlState.Selected)
         self.button.layer.cornerRadius = 8.0
@@ -89,10 +105,12 @@ class GameViewController: UIViewController {
     }
     
     func ring() {
-        stopTimer()
-        self.button.enabled = false
-        self.soundManager!.play("alarm")
-        self.updateButtonBg()
+        if !self.finished {
+            stopTimer()
+            self.button.enabled = false
+            self.soundManager!.play("alarm")
+            self.updateButtonBg()
+        }
     }
     
     override func shouldAutorotate() -> Bool {
@@ -133,10 +151,10 @@ class GameViewController: UIViewController {
             self.seconds = 60 * Double(round((-angle * 3600)/((Float)(M_PI)*2) / 60))
             self.updateLabel()
             self.top.rotation =  SCNVector4Make(0, 1, 0, angle)
-            if self.seconds != self.seconds {
-                self.soundManager!.play("tick2")
-            }
-            self.prevSeconds = self.seconds
+//            if self.seconds != self.prevSeconds {
+//                self.soundManager!.play("tick2")
+//            }
+//            self.prevSeconds = self.seconds
         }
         else if sender.state == UIGestureRecognizerState.Ended {
             if !self.finished && self.seconds > 0 {
@@ -150,7 +168,7 @@ class GameViewController: UIViewController {
     }
     
     func update() {
-        self.seconds = self.endDate!.timeIntervalSinceNow
+        self.seconds = round(self.endDate!.timeIntervalSinceNow)
         println(self.seconds)
         self.setRotation(self.seconds)
         self.updateLabel()
