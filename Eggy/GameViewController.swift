@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
         // 3D setup
         let scene = SCNScene(named: "art.scnassets/egg")!
         let cameraNode = SCNNode()
-        let lightNode = SCNNode()
+//        let lightNode = SCNNode()
         
         // Cam
         cameraNode.camera = SCNCamera()
@@ -55,7 +55,7 @@ class GameViewController: UIViewController {
         
         // Define parts of object
         self.top = scene.rootNode.childNodeWithName("Top", recursively: true)!
-        let bottom = scene.rootNode.childNodeWithName("Bottom", recursively: true)!
+        scene.rootNode.childNodeWithName("Bottom", recursively: true)!
         
         let scnView = self.skView
         scnView.scene = scene
@@ -121,11 +121,11 @@ class GameViewController: UIViewController {
         return true
     }
     
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.AllButUpsideDown
         } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
+            return UIInterfaceOrientationMask.All
         }
     }
     
@@ -169,7 +169,7 @@ class GameViewController: UIViewController {
     
     func update() {
         self.seconds = round(self.endDate!.timeIntervalSinceNow)
-        println(self.seconds)
+        print(self.seconds)
         self.setRotation(self.seconds)
         self.updateLabel()
         

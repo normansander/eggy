@@ -27,7 +27,12 @@ class SoundManager {
     func register(name: String!, loops: Int = 0) {
         let path = NSBundle.mainBundle().pathForResource(name, ofType:"mp3")
         let fileURL = NSURL(fileURLWithPath: path!)
-        let sound = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        let sound: AVAudioPlayer!
+        do {
+            sound = try AVAudioPlayer(contentsOfURL: fileURL)
+        } catch _ {
+            sound = nil
+        }
         sound!.numberOfLoops = loops
         sound!.prepareToPlay()
         self.sounds[name] = sound

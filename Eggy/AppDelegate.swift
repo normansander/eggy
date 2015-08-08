@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Eggy
 //
-//  Created by Norman Sander on 16.05.15.
-//  Copyright (c) 2015 Norman Sander. All rights reserved.
+//  Created by Norman Sander on 08.08.15.
+//  Copyright © 2015 Norman Sander. All rights reserved.
 //
 
 import UIKit

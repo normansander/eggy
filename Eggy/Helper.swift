@@ -13,10 +13,10 @@ class Helper {
     class func printFonts() {
         let fontFamilyNames = UIFont.familyNames()
         for familyName in fontFamilyNames {
-            println("------------------------------")
-            println("Font Family Name = [\(familyName)]")
-            let names = UIFont.fontNamesForFamilyName(familyName as! String)
-            println("Font Names = [\(names)]")
+            print("------------------------------")
+            print("Font Family Name = [\(familyName)]")
+            let names = UIFont.fontNamesForFamilyName(familyName )
+            print("Font Names = [\(names)]")
         }
     }
 }
