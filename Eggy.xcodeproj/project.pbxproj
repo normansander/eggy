@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */; };
 		9489D8451B766820001E746C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8441B766820001E746C /* AppDelegate.swift */; };
 		9489D8471B766820001E746C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8461B766820001E746C /* art.scnassets */; };
 		9489D84E1B766820001E746C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D84D1B766820001E746C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.release.xcconfig"; sourceTree = "<group>"; };
 		9489D8411B766820001E746C /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9489D8441B766820001E746C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9489D8461B766820001E746C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		9489D87C1B7668E4001E746C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9489D87E1B766913001E746C /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		9489D8801B76691C001E746C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.debug.xcconfig"; sourceTree = "<group>"; };
+		FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eggy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,8 @@
 				9489D85A1B766821001E746C /* EggyTests */,
 				9489D8651B766821001E746C /* EggyUITests */,
 				9489D8421B766820001E746C /* Products */,
+				CD21B2653C5E01F30ED6120F /* Pods */,
+				C8F52C1E753F6FD9867F0274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +158,23 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		C8F52C1E753F6FD9867F0274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD21B2653C5E01F30ED6120F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */,
+				76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9489D86B1B766821001E746C /* Build configuration list for PBXNativeTarget "Eggy" */;
 			buildPhases = (
+				714BF226BAEC8D6C0F7486A5 /* Check Pods Manifest.lock */,
 				9489D83D1B766820001E746C /* Sources */,
 				9489D83E1B766820001E746C /* Frameworks */,
 				9489D83F1B766820001E746C /* Resources */,
+				41C1D7E43824CB88234C6789 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +305,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41C1D7E43824CB88234C6789 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eggy/Pods-Eggy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		714BF226BAEC8D6C0F7486A5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9489D83D1B766820001E746C /* Sources */ = {
@@ -420,6 +479,7 @@
 		};
 		9489D86C1B766821001E746C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Eggy/Info.plist;
@@ -432,6 +492,7 @@
 		};
 		9489D86D1B766821001E746C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Eggy/Info.plist;

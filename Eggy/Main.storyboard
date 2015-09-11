@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wCu-rI-1QV">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -98,6 +99,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Uay-nE-4m3"/>
                     <connections>
                         <outlet property="button" destination="iLa-ma-y2e" id="pXN-At-bAt"/>
                         <outlet property="infoButton" destination="IxV-zK-i72" id="T2y-UC-CG4"/>
@@ -107,6 +109,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1252.5" y="432"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kZJ-ZL-whd">
+            <objects>
+                <viewController id="wCu-rI-1QV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jq6-Vd-1m0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FHW-zl-byb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yMd-RD-N2u">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b9-bV-mbM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Sci-ro-dwZ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="QdX-Gu-QHH"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sci-ro-dwZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="184" width="400" height="44"/>
+                                    <mask key="constraints">
+                                        <include reference="Sci-ro-dwZ"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7b9-bV-mbM" firstAttribute="leading" secondItem="yMd-RD-N2u" secondAttribute="leadingMargin" id="1P9-ec-76Y"/>
+                            <constraint firstItem="7b9-bV-mbM" firstAttribute="top" secondItem="yMd-RD-N2u" secondAttribute="topMargin" id="DkI-lY-I2X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7b9-bV-mbM" secondAttribute="trailing" constant="-20" id="qZV-AE-cj4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7b9-bV-mbM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1P9-ec-76Y"/>
+                                <exclude reference="DkI-lY-I2X"/>
+                                <exclude reference="qZV-AE-cj4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7b9-bV-mbM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1P9-ec-76Y"/>
+                                <include reference="DkI-lY-I2X"/>
+                                <include reference="qZV-AE-cj4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuY-Ru-DW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.5" y="391.5"/>
         </scene>
     </scenes>
 </document>
