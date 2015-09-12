@@ -15,7 +15,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var skView: SCNView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var infoButton: UIButton!
     
     var currentAngle: Float = 0.0
     var top: SCNNode = SCNNode()
@@ -221,5 +220,8 @@ class GameViewController: UIViewController {
         else {
             self.stopTimer()
         }
+    }
+    
+    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
     }
 }
