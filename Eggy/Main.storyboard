@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="2064" y="432"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="TG0-8y-bGF">
             <objects>
-                <viewController id="cOz-5r-dxD" sceneMemberID="viewController">
+                <viewController id="cOz-5r-dxD" customClass="InfoViewController" customModule="Eggy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aOG-3T-uOI"/>
                         <viewControllerLayoutGuide type="bottom" id="y1W-0g-aYT"/>
@@ -140,12 +140,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-tw-P46">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LII-vs-lH8" firstAttribute="top" secondItem="Hhc-gF-g42" secondAttribute="top" id="9hO-9d-3LD"/>
+                            <constraint firstItem="e6L-tw-P46" firstAttribute="top" secondItem="LII-vs-lH8" secondAttribute="bottom" id="E5p-O1-oT8"/>
                             <constraint firstItem="LII-vs-lH8" firstAttribute="leading" secondItem="Hhc-gF-g42" secondAttribute="leading" id="Xuv-lX-yNi"/>
+                            <constraint firstAttribute="trailing" secondItem="e6L-tw-P46" secondAttribute="trailing" id="ZfU-4c-IOF"/>
+                            <constraint firstItem="y1W-0g-aYT" firstAttribute="top" secondItem="e6L-tw-P46" secondAttribute="bottom" id="e3h-6F-6AO"/>
                             <constraint firstAttribute="trailing" secondItem="LII-vs-lH8" secondAttribute="trailing" id="kLY-Du-KCd"/>
+                            <constraint firstItem="e6L-tw-P46" firstAttribute="leading" secondItem="Hhc-gF-g42" secondAttribute="leading" id="oes-4Y-3jG"/>
                         </constraints>
                     </view>
                 </viewController>

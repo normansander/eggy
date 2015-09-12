@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */; };
+		94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94178ED51BA3A60000C065F4 /* InfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9489D8451B766820001E746C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8441B766820001E746C /* AppDelegate.swift */; };
 		9489D8471B766820001E746C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8461B766820001E746C /* art.scnassets */; };
 		9489D84E1B766820001E746C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D84D1B766820001E746C /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.release.xcconfig"; sourceTree = "<group>"; };
+		94178ED51BA3A60000C065F4 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9489D8411B766820001E746C /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9489D8441B766820001E746C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9489D8461B766820001E746C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				9489D87A1B7668CB001E746C /* Helper.swift */,
 				9489D87C1B7668E4001E746C /* GameViewController.swift */,
 				9489D87E1B766913001E746C /* SoundManager.swift */,
+				94178ED51BA3A60000C065F4 /* InfoViewController.swift */,
 				9489D8521B766820001E746C /* Info.plist */,
 			);
 			path = Eggy;
@@ -348,6 +351,7 @@
 				9489D87F1B766913001E746C /* SoundManager.swift in Sources */,
 				9489D87D1B7668E4001E746C /* GameViewController.swift in Sources */,
 				9489D87B1B7668CB001E746C /* Helper.swift in Sources */,
+				94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
