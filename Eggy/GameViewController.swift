@@ -20,8 +20,8 @@ class GameViewController: UIViewController {
     var top: SCNNode = SCNNode()
     var seconds: Double = 0
     var prevSeconds: Double = 0
-    var endDate: NSDate?
-    var timer: NSTimer?
+    var endDate: Date?
+    var timer: Timer?
     var finished: Bool = true
     var soundManager: SoundManager?
     
@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
         self.label.font = UIFont(name: "Futura-CondensedMedium", size:25)
         
         // Register sounds
-        self.soundManager = SoundManager.sharedInstance
+        self.soundManager = SoundManager.shared
         self.soundManager?.register("tick", loops: -1)
         self.soundManager?.register("tick2")
         self.soundManager?.register("alarm")
@@ -53,33 +53,33 @@ class GameViewController: UIViewController {
 //        scene.rootNode.addChildNode(lightNode)
         
         // Define parts of object
-        self.top = scene.rootNode.childNodeWithName("Top", recursively: true)!
-        scene.rootNode.childNodeWithName("Bottom", recursively: true)!
+        self.top = scene.rootNode.childNode(withName: "Top", recursively: true)!
+        scene.rootNode.childNode(withName: "Bottom", recursively: true)!
         
         let scnView = self.skView
-        scnView.scene = scene
+        scnView?.scene = scene
         
 #if DEBUG
         scnView.showsStatistics = true
         Helper.printFonts()
 #endif
-        scnView.backgroundColor = UIColor.whiteColor()
+        scnView?.backgroundColor = UIColor.white
         
         // Add gesture recognizer
-        let panRecognizer = UIPanGestureRecognizer(target: self, action: "panGesture:")
-        scnView.addGestureRecognizer(panRecognizer)
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(GameViewController.panGesture(_:)))
+        scnView?.addGestureRecognizer(panRecognizer)
         
         self.updateLabel()
         
         self.button.titleLabel?.font = UIFont(name: "Futura-CondensedMedium", size:25)
-        self.button.setTitle("Start", forState: UIControlState.Normal)
-        self.button.setTitle("Stop", forState: UIControlState.Selected)
+        self.button.setTitle("Start", for: UIControlState())
+        self.button.setTitle("Stop", for: UIControlState.selected)
         self.button.layer.cornerRadius = 8.0
-        self.button.enabled = false
-        self.button.layer.borderColor = UIColor.lightGrayColor().CGColor
-        self.button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Disabled)
-        self.button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        self.button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Selected)
+        self.button.isEnabled = false
+        self.button.layer.borderColor = UIColor.lightGray.cgColor
+        self.button.setTitleColor(UIColor.gray, for: UIControlState.disabled)
+        self.button.setTitleColor(UIColor.white, for: UIControlState())
+        self.button.setTitleColor(UIColor.white, for: UIControlState.selected)
         updateButtonBg()
     }
     
@@ -87,9 +87,9 @@ class GameViewController: UIViewController {
         if self.seconds == 0 {
             return
         }
-        self.button.selected = true
-        self.endDate = NSDate().dateByAddingTimeInterval(self.seconds)
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        self.button.isSelected = true
+        self.endDate = Date().addingTimeInterval(self.seconds)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(GameViewController.update), userInfo: nil, repeats: true)
         self.finished = false
         self.soundManager!.play("tick")
         self.updateButtonBg()
@@ -98,7 +98,7 @@ class GameViewController: UIViewController {
     func stopTimer() {
         self.timer?.invalidate()
         self.finished = true
-        self.button.selected = false
+        self.button.isSelected = false
         self.soundManager!.stop("tick")
         self.updateButtonBg()
     }
@@ -106,25 +106,25 @@ class GameViewController: UIViewController {
     func ring() {
         if !self.finished {
             stopTimer()
-            self.button.enabled = false
+            self.button.isEnabled = false
             self.soundManager!.play("alarm")
             self.updateButtonBg()
         }
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return true
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return UIInterfaceOrientationMask.AllButUpsideDown
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return UIInterfaceOrientationMask.allButUpsideDown
         } else {
-            return UIInterfaceOrientationMask.All
+            return UIInterfaceOrientationMask.all
         }
     }
     
@@ -133,14 +133,14 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
     
-    func panGesture(sender: UIPanGestureRecognizer) {
+    func panGesture(_ sender: UIPanGestureRecognizer) {
         self.stopTimer()
         self.updateButtonBg()
-        self.button.enabled = true
-        let translation = sender.translationInView(sender.view!)
+        self.button.isEnabled = true
+        let translation = sender.translation(in: sender.view!)
         var angle: Float
         
-        if sender.state == UIGestureRecognizerState.Changed {
+        if sender.state == UIGestureRecognizerState.changed {
             angle = (Float)(translation.x)*(Float)(M_PI)/180.0
             angle += self.currentAngle
             
@@ -155,7 +155,7 @@ class GameViewController: UIViewController {
 //            }
 //            self.prevSeconds = self.seconds
         }
-        else if sender.state == UIGestureRecognizerState.Ended {
+        else if sender.state == UIGestureRecognizerState.ended {
             if !self.finished && self.seconds > 0 {
                 self.startTimer()
             }
@@ -178,15 +178,15 @@ class GameViewController: UIViewController {
         }
     }
     
-    func setRotation(seconds: Double) {
+    func setRotation(_ seconds: Double) {
         let newAngle = (Float(-self.seconds)*(Float)(M_PI)*2)/3600
         self.top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
         self.currentAngle = newAngle
     }
     
     func updateLabel() {
-        let seconds: Int = Int(self.seconds % 60)
-        let minutes: Int = Int((self.seconds / 60) % 60)
+        let seconds: Int = Int(self.seconds.truncatingRemainder(dividingBy: 60))
+        let minutes: Int = Int((self.seconds / 60).truncatingRemainder(dividingBy: 60))
         let hours: Int = Int(self.seconds / 3600)
         
         if(hours > 0){
@@ -198,8 +198,8 @@ class GameViewController: UIViewController {
     }
     
     func updateButtonBg() {
-        if !self.button.enabled {
-            self.button.backgroundColor =  UIColor.clearColor()
+        if !self.button.isEnabled {
+            self.button.backgroundColor =  UIColor.clear
             self.button.layer.borderWidth = 1.0
             return
         }
@@ -212,7 +212,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func btnPressed(sender: UIButton) {
+    @IBAction func btnPressed(_ sender: UIButton) {
         self.timer?.invalidate()
         if self.finished {
             self.startTimer()
@@ -222,6 +222,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+    @IBAction func unwindToThisViewController(_ segue: UIStoryboardSegue) {
     }
 }

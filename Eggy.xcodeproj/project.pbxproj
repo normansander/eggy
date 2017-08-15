@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */; };
-		94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94178ED51BA3A60000C065F4 /* InfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94178ED51BA3A60000C065F4 /* InfoViewController.swift */; };
 		9489D8451B766820001E746C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8441B766820001E746C /* AppDelegate.swift */; };
 		9489D8471B766820001E746C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8461B766820001E746C /* art.scnassets */; };
 		9489D84E1B766820001E746C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D84D1B766820001E746C /* Assets.xcassets */; };
@@ -247,13 +247,16 @@
 				TargetAttributes = {
 					9489D8401B766820001E746C = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 					9489D8561B766821001E746C = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 9489D8401B766820001E746C;
 					};
 					9489D8611B766821001E746C = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 9489D8401B766820001E746C;
 					};
 				};
@@ -491,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokuslabs.eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -504,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokuslabs.eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -515,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.headione.EggyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
 			};
 			name = Debug;
@@ -527,6 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.headione.EggyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
 			};
 			name = Release;
@@ -538,6 +545,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.headione.EggyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Eggy;
 				USES_XCTRUNNER = YES;
 			};
@@ -550,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.headione.EggyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Eggy;
 				USES_XCTRUNNER = YES;
 			};

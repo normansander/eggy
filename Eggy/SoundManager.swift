@@ -9,27 +9,31 @@
 import Foundation
 import AVFoundation
 
-class SoundManager {
+final class SoundManager {
+    
+//    private static var __once: () = {
+//            Static.instance = SoundManager()
+//        }()
+    
+    static let shared = SoundManager()
     
     var sounds: Dictionary<String, AVAudioPlayer> = Dictionary<String, AVAudioPlayer>()
     
-    class var sharedInstance: SoundManager {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: SoundManager? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = SoundManager()
-        }
-        return Static.instance!
-    }
+//    class var sharedInstance: SoundManager {
+//        struct Static {
+//            static var onceToken: Int = 0
+//            static var instance: SoundManager? = nil
+//        }
+//        _ = SoundManager.__once
+//        return Static.instance!
+//    }
     
-    func register(name: String!, loops: Int = 0) {
-        let path = NSBundle.mainBundle().pathForResource(name, ofType:"mp3")
-        let fileURL = NSURL(fileURLWithPath: path!)
+    func register(_ name: String!, loops: Int = 0) {
+        let path = Bundle.main.path(forResource: name, ofType:"mp3")
+        let fileURL = URL(fileURLWithPath: path!)
         let sound: AVAudioPlayer!
         do {
-            sound = try AVAudioPlayer(contentsOfURL: fileURL)
+            sound = try AVAudioPlayer(contentsOf: fileURL)
         } catch _ {
             sound = nil
         }
@@ -38,13 +42,13 @@ class SoundManager {
         self.sounds[name] = sound
     }
     
-    func play(name: String!) {
+    func play(_ name: String!) {
         self.sounds[name]?.stop()
         self.sounds[name]?.currentTime = 0
         self.sounds[name]?.play()
     }
     
-    func stop(name: String!) {
+    func stop(_ name: String!) {
         self.sounds[name]?.stop()
     }
 }
