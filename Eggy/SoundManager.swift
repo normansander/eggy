@@ -10,23 +10,10 @@ import Foundation
 import AVFoundation
 
 final class SoundManager {
-    
-//    private static var __once: () = {
-//            Static.instance = SoundManager()
-//        }()
-    
     static let shared = SoundManager()
     
     var sounds: Dictionary<String, AVAudioPlayer> = Dictionary<String, AVAudioPlayer>()
     
-//    class var sharedInstance: SoundManager {
-//        struct Static {
-//            static var onceToken: Int = 0
-//            static var instance: SoundManager? = nil
-//        }
-//        _ = SoundManager.__once
-//        return Static.instance!
-//    }
     
     func register(_ name: String!, loops: Int = 0) {
         let path = Bundle.main.path(forResource: name, ofType:"mp3")

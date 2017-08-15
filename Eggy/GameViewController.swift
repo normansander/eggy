@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
         
         // Define parts of object
         self.top = scene.rootNode.childNode(withName: "Top", recursively: true)!
-        scene.rootNode.childNode(withName: "Bottom", recursively: true)!
+        scene.rootNode.childNode(withName: "Bottom", recursively: true)
         
         let scnView = self.skView
         scnView?.scene = scene
@@ -141,13 +141,13 @@ class GameViewController: UIViewController {
         var angle: Float
         
         if sender.state == UIGestureRecognizerState.changed {
-            angle = (Float)(translation.x)*(Float)(M_PI)/180.0
+            angle = (Float)(translation.x)*(Float)(Double.pi)/180.0
             angle += self.currentAngle
             
             if angle > 0 {
                 angle = 0
             }
-            self.seconds = 60 * Double(round((-angle * 3600)/((Float)(M_PI)*2) / 60))
+            self.seconds = 60 * Double(round((-angle * 3600)/((Float)(Double.pi)*2) / 60))
             self.updateLabel()
             self.top.rotation =  SCNVector4Make(0, 1, 0, angle)
 //            if self.seconds != self.prevSeconds {
@@ -179,7 +179,7 @@ class GameViewController: UIViewController {
     }
     
     func setRotation(_ seconds: Double) {
-        let newAngle = (Float(-self.seconds)*(Float)(M_PI)*2)/3600
+        let newAngle = (Float(-self.seconds)*(Float)(Double.pi)*2)/3600
         self.top.rotation =  SCNVector4Make(0, 1, 0, newAngle)
         self.currentAngle = newAngle
     }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */; };
+		46ADF25D47472AD6A4D690C2 /* libPods-EggyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A857C39E329AB31EC010654B /* libPods-EggyTests.a */; };
+		6B2E286C9843113A3BC2C789 /* libPods-EggyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5FA01FF192DDB9B2C46091 /* libPods-EggyUITests.a */; };
 		94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94178ED51BA3A60000C065F4 /* InfoViewController.swift */; };
 		9489D8451B766820001E746C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8441B766820001E746C /* AppDelegate.swift */; };
 		9489D8471B766820001E746C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8461B766820001E746C /* art.scnassets */; };
@@ -22,6 +23,7 @@
 		9489D87D1B7668E4001E746C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D87C1B7668E4001E746C /* GameViewController.swift */; };
 		9489D87F1B766913001E746C /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D87E1B766913001E746C /* SoundManager.swift */; };
 		9489D8811B76691C001E746C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8801B76691C001E746C /* Main.storyboard */; };
+		FD9F270E11177C5B3F4802E6 /* libPods-Eggy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8BE37A173F0559593610B0 /* libPods-Eggy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.release.xcconfig"; sourceTree = "<group>"; };
+		024E166E786AF1EB2003545F /* Pods-EggyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EggyTests/Pods-EggyTests.release.xcconfig"; sourceTree = "<group>"; };
+		15574DB9A6FE38C44A573B5F /* Pods-Eggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.debug.xcconfig"; sourceTree = "<group>"; };
+		2F8BE37A173F0559593610B0 /* libPods-Eggy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eggy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DDC495EFFCAD3186661A22 /* Pods-EggyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E37137B65D129EE5E04CF1B /* Pods-EggyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C5FA01FF192DDB9B2C46091 /* libPods-EggyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EggyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94178ED51BA3A60000C065F4 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9489D8411B766820001E746C /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9489D8441B766820001E746C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +70,9 @@
 		9489D87C1B7668E4001E746C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9489D87E1B766913001E746C /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		9489D8801B76691C001E746C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.debug.xcconfig"; sourceTree = "<group>"; };
-		FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eggy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A857C39E329AB31EC010654B /* libPods-EggyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EggyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85CCDBFCB877D536040CA71 /* Pods-EggyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EggyTests/Pods-EggyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C766867FA7CFB84161091A28 /* Pods-Eggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eggy/Pods-Eggy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA8EEB0EB4DD32788761771 /* libPods-Eggy.a in Frameworks */,
+				FD9F270E11177C5B3F4802E6 /* libPods-Eggy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ADF25D47472AD6A4D690C2 /* libPods-EggyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2E286C9843113A3BC2C789 /* libPods-EggyUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E21FEC181DF222C460059D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15574DB9A6FE38C44A573B5F /* Pods-Eggy.debug.xcconfig */,
+				C766867FA7CFB84161091A28 /* Pods-Eggy.release.xcconfig */,
+				A85CCDBFCB877D536040CA71 /* Pods-EggyTests.debug.xcconfig */,
+				024E166E786AF1EB2003545F /* Pods-EggyTests.release.xcconfig */,
+				6E37137B65D129EE5E04CF1B /* Pods-EggyUITests.debug.xcconfig */,
+				43DDC495EFFCAD3186661A22 /* Pods-EggyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		913B6E51F90C2A7A3B8A0A23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F8BE37A173F0559593610B0 /* libPods-Eggy.a */,
+				A857C39E329AB31EC010654B /* libPods-EggyTests.a */,
+				8C5FA01FF192DDB9B2C46091 /* libPods-EggyUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9489D8381B766820001E746C = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +133,8 @@
 				9489D85A1B766821001E746C /* EggyTests */,
 				9489D8651B766821001E746C /* EggyUITests */,
 				9489D8421B766820001E746C /* Products */,
-				CD21B2653C5E01F30ED6120F /* Pods */,
-				C8F52C1E753F6FD9867F0274 /* Frameworks */,
+				5E21FEC181DF222C460059D2 /* Pods */,
+				913B6E51F90C2A7A3B8A0A23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,23 +194,6 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
-		C8F52C1E753F6FD9867F0274 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC8146D89BFDA925709C9C1A /* libPods-Eggy.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CD21B2653C5E01F30ED6120F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */,
-				76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,11 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9489D86B1B766821001E746C /* Build configuration list for PBXNativeTarget "Eggy" */;
 			buildPhases = (
-				714BF226BAEC8D6C0F7486A5 /* Check Pods Manifest.lock */,
+				75EB6DE5E178FFC39C195882 /* [CP] Check Pods Manifest.lock */,
 				9489D83D1B766820001E746C /* Sources */,
 				9489D83E1B766820001E746C /* Frameworks */,
 				9489D83F1B766820001E746C /* Resources */,
-				41C1D7E43824CB88234C6789 /* Copy Pods Resources */,
+				8B28331DC80757BAC1D93558 /* [CP] Embed Pods Frameworks */,
+				632C81B5992CF1C7F7A34FE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9489D86E1B766821001E746C /* Build configuration list for PBXNativeTarget "EggyTests" */;
 			buildPhases = (
+				5F4516BF4B7B1816996BBA46 /* [CP] Check Pods Manifest.lock */,
 				9489D8531B766821001E746C /* Sources */,
 				9489D8541B766821001E746C /* Frameworks */,
 				9489D8551B766821001E746C /* Resources */,
+				C82FAD6910E4CFDC4A8F7294 /* [CP] Embed Pods Frameworks */,
+				60545AB7433F23FB15848293 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9489D8711B766821001E746C /* Build configuration list for PBXNativeTarget "EggyUITests" */;
 			buildPhases = (
+				923D53BC1EC003F1F3A7D8CE /* [CP] Check Pods Manifest.lock */,
 				9489D85E1B766821001E746C /* Sources */,
 				9489D85F1B766821001E746C /* Frameworks */,
 				9489D8601B766821001E746C /* Resources */,
+				BEEE7082A26F4352AFE5BA66 /* [CP] Embed Pods Frameworks */,
+				58AD54CA6E86945EDAD613F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,11 +265,12 @@
 		9489D8391B766820001E746C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Norman Sander";
 				TargetAttributes = {
 					9489D8401B766820001E746C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5YLLXUZBZ2;
 						LastSwiftMigration = 0830;
 					};
 					9489D8561B766821001E746C = {
@@ -313,14 +337,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41C1D7E43824CB88234C6789 /* Copy Pods Resources */ = {
+		58AD54CA6E86945EDAD613F3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F4516BF4B7B1816996BBA46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60545AB7433F23FB15848293 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EggyTests/Pods-EggyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632C81B5992CF1C7F7A34FE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,19 +397,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eggy/Pods-Eggy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		714BF226BAEC8D6C0F7486A5 /* Check Pods Manifest.lock */ = {
+		75EB6DE5E178FFC39C195882 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B28331DC80757BAC1D93558 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eggy/Pods-Eggy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923D53BC1EC003F1F3A7D8CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEEE7082A26F4352AFE5BA66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C82FAD6910E4CFDC4A8F7294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EggyTests/Pods-EggyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,8 +543,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -459,8 +590,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -479,6 +612,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -486,11 +620,12 @@
 		};
 		9489D86C1B766821001E746C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C91D681C9454242664761B2D /* Pods-Eggy.debug.xcconfig */;
+			baseConfigurationReference = 15574DB9A6FE38C44A573B5F /* Pods-Eggy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YLLXUZBZ2;
 				INFOPLIST_FILE = Eggy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokuslabs.eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,11 +635,12 @@
 		};
 		9489D86D1B766821001E746C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76FE52703C969FBD50CA9132 /* Pods-Eggy.release.xcconfig */;
+			baseConfigurationReference = C766867FA7CFB84161091A28 /* Pods-Eggy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YLLXUZBZ2;
 				INFOPLIST_FILE = Eggy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokuslabs.eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +650,7 @@
 		};
 		9489D86F1B766821001E746C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85CCDBFCB877D536040CA71 /* Pods-EggyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EggyTests/Info.plist;
@@ -527,6 +664,7 @@
 		};
 		9489D8701B766821001E746C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024E166E786AF1EB2003545F /* Pods-EggyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EggyTests/Info.plist;
@@ -540,6 +678,7 @@
 		};
 		9489D8721B766821001E746C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E37137B65D129EE5E04CF1B /* Pods-EggyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = EggyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -553,6 +692,7 @@
 		};
 		9489D8731B766821001E746C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43DDC495EFFCAD3186661A22 /* Pods-EggyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = EggyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
