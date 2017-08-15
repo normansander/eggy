@@ -222,4 +222,7 @@ class GameViewController: UIViewController {
             self.stopTimer()
         }
     }
+    
+    @IBAction func showInfo(_ segue: UIStoryboardSegue) {
+    }
 }

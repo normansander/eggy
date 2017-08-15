@@ -11,7 +11,7 @@ import UIKit
 
 class InfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var items: [String] = ["We", "Heart", "Swift"]
+    var items: [String] = ["row1", "row2"]
 
     @IBOutlet weak var tableView: UITableView!
 

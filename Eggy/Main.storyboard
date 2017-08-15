@@ -138,7 +138,7 @@
                                     <navigationItem title="Title" id="Nfe-43-i1R">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="oGK-5K-kkJ">
                                             <connections>
-                                                <segue destination="czz-5b-zI2" kind="unwind" unwindAction="unwindToThisViewController:" id="g7b-JK-xB6"/>
+                                                <segue destination="czz-5b-zI2" kind="unwind" unwindAction="showInfo:" id="g7b-JK-xB6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
