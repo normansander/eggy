@@ -141,7 +141,7 @@ class GameViewController: UIViewController {
         var angle: Float
 
         if sender.state == UIGestureRecognizerState.changed {
-            angle = (Float)(translation.x) * (Float)(Double.pi) / 180.0
+            angle = (Float)(translation.x * 0.3) * (Float)(Double.pi) / 180.0
             angle += self.currentAngle
 
             if angle > 0 {
@@ -154,9 +154,9 @@ class GameViewController: UIViewController {
 
             print(self.seconds)
 
-            if (self.seconds != self.prevSeconds) {
-                self.soundManager!.play("tick2")
-            }
+//            if (self.seconds != self.prevSeconds) {
+//                self.soundManager!.play("tick2")
+//            }
 
             self.prevSeconds = self.seconds
         } else if sender.state == UIGestureRecognizerState.ended {
