@@ -1,2 +1,2 @@
-# eggy
+# eggy 🐣
 scenekit project
