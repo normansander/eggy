@@ -82,6 +82,24 @@ class GameViewController: UIViewController {
         self.button.setTitleColor(UIColor.white, for: UIControlState.selected)
         updateButtonBg()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceRotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+    }
+    
+    func deviceRotated(){
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            print("Landscape")
+        }
+        if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
+            print("Portrait")
+        }
+    }
 
     func startTimer() {
         if self.seconds == 0 {
@@ -171,7 +189,12 @@ class GameViewController: UIViewController {
     }
 
     func update() {
-        self.seconds = round(self.endDate!.timeIntervalSinceNow)
+        if self.endDate != nil {
+            self.seconds = round(self.endDate!.timeIntervalSinceNow)
+        } else {
+            self.seconds = 0
+        }
+        
         print(self.seconds)
         self.setRotation(self.seconds)
         self.updateLabel()
