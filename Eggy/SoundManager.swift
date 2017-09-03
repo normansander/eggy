@@ -15,7 +15,7 @@ final class SoundManager {
     var sounds: Dictionary<String, AVAudioPlayer> = Dictionary<String, AVAudioPlayer>()
 
 
-    func register(_ name: String!, loops: Int = 0) {
+    func register(_ name: String!, loops: Int = 0, volume: Float = 1) {
         let path = Bundle.main.path(forResource: name, ofType: "mp3")
         let fileURL = URL(fileURLWithPath: path!)
         let sound: AVAudioPlayer!
@@ -24,6 +24,7 @@ final class SoundManager {
         } catch _ {
             sound = nil
         }
+        sound!.volume = volume
         sound!.numberOfLoops = loops
         sound!.prepareToPlay()
         self.sounds[name] = sound

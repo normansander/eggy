@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		545034086460D8D65BB15110 /* Pods_EggyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3408AD735DB26226C39061 /* Pods_EggyUITests.framework */; };
+		941375D81F5C29DD00E7E96F /* ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 941375D71F5C29DD00E7E96F /* ring.mp3 */; };
 		94178ED61BA3A60000C065F4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94178ED51BA3A60000C065F4 /* InfoViewController.swift */; };
 		9489D8451B766820001E746C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8441B766820001E746C /* AppDelegate.swift */; };
 		9489D8471B766820001E746C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8461B766820001E746C /* art.scnassets */; };
@@ -17,7 +18,6 @@
 		9489D8671B766821001E746C /* EggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D8661B766821001E746C /* EggyUITests.swift */; };
 		9489D8771B76687B001E746C /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8741B76687B001E746C /* tick.mp3 */; };
 		9489D8781B76687B001E746C /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8751B76687B001E746C /* tick2.mp3 */; };
-		9489D8791B76687B001E746C /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9489D8761B76687B001E746C /* alarm.mp3 */; };
 		9489D87B1B7668CB001E746C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D87A1B7668CB001E746C /* Helper.swift */; };
 		9489D87D1B7668E4001E746C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D87C1B7668E4001E746C /* GameViewController.swift */; };
 		9489D87F1B766913001E746C /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489D87E1B766913001E746C /* SoundManager.swift */; };
@@ -49,6 +49,7 @@
 		43DDC495EFFCAD3186661A22 /* Pods-EggyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60E494D545BA206B11DCB61D /* Pods_Eggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E37137B65D129EE5E04CF1B /* Pods-EggyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EggyUITests/Pods-EggyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		941375D71F5C29DD00E7E96F /* ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ring.mp3; sourceTree = "<group>"; };
 		94178ED51BA3A60000C065F4 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9489D8411B766820001E746C /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9489D8441B766820001E746C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		9489D8681B766821001E746C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9489D8741B76687B001E746C /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		9489D8751B76687B001E746C /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
-		9489D8761B76687B001E746C /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		9489D87A1B7668CB001E746C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9489D87C1B7668E4001E746C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9489D87E1B766913001E746C /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -187,9 +187,9 @@
 		9489D8821B766952001E746C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				941375D71F5C29DD00E7E96F /* ring.mp3 */,
 				9489D8741B76687B001E746C /* tick.mp3 */,
 				9489D8751B76687B001E746C /* tick2.mp3 */,
-				9489D8761B76687B001E746C /* alarm.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -312,11 +312,11 @@
 			files = (
 				9489D8811B76691C001E746C /* Main.storyboard in Resources */,
 				9489D8471B766820001E746C /* art.scnassets in Resources */,
+				941375D81F5C29DD00E7E96F /* ring.mp3 in Resources */,
 				9489D8771B76687B001E746C /* tick.mp3 in Resources */,
 				9489D8781B76687B001E746C /* tick2.mp3 in Resources */,
 				9489D8511B766820001E746C /* LaunchScreen.storyboard in Resources */,
 				9489D84E1B766820001E746C /* Assets.xcassets in Resources */,
-				9489D8791B76687B001E746C /* alarm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,9 +30,9 @@ class GameViewController: UIViewController {
 
         // Register sounds
         self.soundManager = SoundManager.shared
-        self.soundManager?.register("tick", loops: -1)
-        self.soundManager?.register("tick2")
-        self.soundManager?.register("alarm")
+        self.soundManager?.register("tick", loops: -1, volume: 0.5)
+//        self.soundManager?.register("tick2")
+        self.soundManager?.register("ring")
 
         super.viewDidLoad()
 
@@ -125,7 +125,7 @@ class GameViewController: UIViewController {
         if !self.finished {
             stopTimer()
             self.button.isEnabled = false
-            self.soundManager!.play("alarm")
+            self.soundManager!.play("ring")
             self.updateButtonBg()
         }
     }
@@ -134,9 +134,9 @@ class GameViewController: UIViewController {
         return true
     }
 
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
